@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<form method="POST">
+  {% csrf_token %}
+  <table>
+    {{form.as_table}}
+  </table>
+  <div class="mb-3">
+    <input type="submit" class="btn btn-primary">
+  </div>
+{% endblock %}
